@@ -1,0 +1,1 @@
+INT NOT NULL CHECK(recency >= 1 AND recency <= 5)
