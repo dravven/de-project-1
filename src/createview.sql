@@ -10,9 +10,9 @@ create view orderitems as
 select *
 from production.orderitems;
 
-create view orderstatues as
+create view orderstatuses as
 select *
-from production.orderstatues;
+from production.orderstatuses;
 
 create view orderstatuslog as
 select *
