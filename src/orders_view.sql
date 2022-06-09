@@ -1,4 +1,7 @@
 create view analysis.order as
-select orders.*, orderstatuslog.status_id
+select orders.*, t.status_id
 from production.orders
-join orderstatuslog on orders.order_ts = orderstatuslog.dttm;
+join 
+(Select *,
+ROW_NUMBER() OVER(PARTITION BY order_id ORDER BY dttm DESC) AS rn
+From analysis.orderstatuslog)t on orders.order_id = t.order_id

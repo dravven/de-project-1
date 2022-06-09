@@ -1,23 +1,23 @@
-create view orders as
+create view analysis.orders as
 select *
 from production.orders;
 
-create view users as
+create view analysis.users as
 select *
 from production.users;
 
-create view orderitems as
+create view analysis.orderitems as
 select *
 from production.orderitems;
 
-create view orderstatuses as
+create view analysis.orderstatuses as
 select *
 from production.orderstatuses;
 
-create view orderstatuslog as
+create view analysis.orderstatuslog as
 select *
 from production.orderstatuslog;
 
-create view products as
+create view analysis.products as
 select *
 from production.products;
