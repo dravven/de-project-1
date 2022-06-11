@@ -5,3 +5,4 @@ join
 (Select *,
 ROW_NUMBER() OVER(PARTITION BY order_id ORDER BY dttm DESC) AS rn
 From analysis.orderstatuslog)t on orders.order_id = t.order_id
+WHERE rn = 1
